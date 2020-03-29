@@ -46,7 +46,7 @@ class TmdbImageResponse {
 
   factory TmdbImageResponse.fromJson(Map<String, dynamic> json) {
     var backdrops = (json['backdrops'] as List<dynamic>).cast<Map>();
-    var posters = (json['backdrops'] as List<dynamic>).cast<Map>();
+    var posters = (json['posters'] as List<dynamic>).cast<Map>();
     return TmdbImageResponse(
       id: json['aspect_ratio'] as int,
       backdrops: backdrops

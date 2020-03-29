@@ -50,7 +50,7 @@ class Tmdb {
   ) async {
     var config = await this.serverConfig;
     var imageSize = await this.getClosestImageSize(image, targetWidth);
-    return '${config.images.baseUrl}/$imageSize/${image.filePath}';
+    return '${config.images.baseUrl}$imageSize${image.filePath}';
   }
 
   Future<String> getClosestImageSize(TmdbImage image, int targetWidth) async {
