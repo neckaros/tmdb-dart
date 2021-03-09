@@ -1,16 +1,16 @@
 name: tmdb
 description: A new Flutter package project.
-version: 0.0.1
+version: 0.0.2
 author:
 homepage:
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: '>=2.12.0-0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.12.0+4
+  http: ^0.13.0
 
 dev_dependencies:
   flutter_test:

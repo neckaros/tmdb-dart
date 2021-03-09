@@ -1,6 +1,6 @@
 class TmdbServerConfig {
-  final List<String> changesKeys;
-  final TmdbImagesConfig images;
+  final List<String>? changesKeys;
+  final TmdbImagesConfig? images;
 
   TmdbServerConfig({this.changesKeys, this.images});
 
@@ -13,13 +13,13 @@ class TmdbServerConfig {
 }
 
 class TmdbImagesConfig {
-  final String baseUrl;
-  final String secureBaseUrl;
-  final List<String> backdropSizes;
-  final List<String> logoSizes;
-  final List<String> posterSizes;
-  final List<String> profileSizes;
-  final List<String> stillSizes;
+  final String? baseUrl;
+  final String? secureBaseUrl;
+  final List<String>? backdropSizes;
+  final List<String>? logoSizes;
+  final List<String>? posterSizes;
+  final List<String>? profileSizes;
+  final List<String>? stillSizes;
 
   TmdbImagesConfig(
       {this.baseUrl,
@@ -32,8 +32,8 @@ class TmdbImagesConfig {
 
   factory TmdbImagesConfig.fromJson(Map<String, dynamic> json) {
     return TmdbImagesConfig(
-      baseUrl: json['base_url'] as String,
-      secureBaseUrl: json['secure_base_url'] as String,
+      baseUrl: json['base_url'] as String?,
+      secureBaseUrl: json['secure_base_url'] as String?,
       backdropSizes: (json['backdrop_sizes'] as List<dynamic>).cast<String>(),
       logoSizes: (json['logo_sizes'] as List<dynamic>).cast<String>(),
       posterSizes: (json['logo_sizes'] as List<dynamic>).cast<String>(),
